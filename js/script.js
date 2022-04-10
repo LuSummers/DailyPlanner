@@ -66,7 +66,11 @@ schedule.forEach(function(hourobj){
    })
    $(".saveBtn").on("click", function(){
   
-      var hourKey = $(this).attr("id")})
+      var hourKey = $(this).attr("id")
+   
+      var activity = $(this).siblings(".description").val()
+   
+   })
       
 // gets data for the header date
 
