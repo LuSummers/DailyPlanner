@@ -53,6 +53,14 @@ var schedule = [
 ]
 schedule.forEach(function(hourobj){
    var color = ""
+   if (hourobj.hour < moment().hours()){
+      color = "past"
+   }
+
+   else if (hourobj.hour == moment().hours()){
+      color = "present"
+   }
+   else {color = "future"}
    
     var rowDiv = $("<div>").addClass("row time-block " + color).attr("id", hourobj.hour);
    
