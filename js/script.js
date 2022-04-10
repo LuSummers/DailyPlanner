@@ -1,5 +1,9 @@
 var schedule = [
    {
+      hour:7,
+      time:"7 am",
+   },
+   {
       hour:8,
       time:"8 am",
    },
@@ -36,19 +40,16 @@ var schedule = [
       time:"4 pm",
    },
    {
-      hour:17 ,
+      hour:17,
       time:"5 pm",
    }, 
    {
-      hour:18 ,
+      hour:18,
       time:"6 pm",
    }, 
    {
-      hour:19 ,
+      hour:19,
       time:"7 pm",
-   },  {
-      hour:20 ,
-      time:"8 pm",
    }, 
 ]
 schedule.forEach(function(hourobj){
