@@ -1,85 +1,72 @@
-var schedule [
-    {
-
-   id = "0",
-   hour = "8",
-   time ="8",
-   plans =""
-},
-{
-
-    id = "1",
-    hour = "9",
-    time ="9",
-    plans =""
- },
- {
-
-    id = "2",
-    hour = "10",
-    time ="10",
-    plans =""
- },
- {
-
-    id = "3",
-    hour = "11",
-    time ="11",
-    plans =""
- },
- {
-
-    id = "4",
-    hour = "12",
-    time ="12",
-    plans =""
- },
- {
-
-    id = "5",
-    hour = "13",
-    time ="13",
-    plans =""
- },
- {
-
-    id = "6",
-    hour = "14",
-    time ="14",
-    plans =""
- },
- {
-
-    id = "7",
-    hour = "15",
-    time ="15",
-    plans =""
- },
- {
-
-    id = "8",
-    hour = "16",
-    time ="16",
-    plans =""
- }, 
- {
-
-    id = "9",
-    hour = "17",
-    time ="17",
-    plans =""
- },
-
- {
-
-    id = "10",
-    hour = "18",
-    time ="18",
-    plans =""
- },
+var schedule = [
+   {
+      hour:8,
+      time:"8 am",
+   },
+   {
+      hour:9,
+      time:"9 am",
+   },
+   {
+      hour:10,
+      time:"10 am",
+   },
+   {
+      hour:11,
+      time:"11 am",
+   },
+   {
+      hour:12,
+      time:"12 pm",
+   },
+   {
+      hour:13,
+      time:"1 pm",
+   },
+   {
+      hour:14,
+      time:"2 pm",
+   },
+   {
+      hour:15,
+      time:"3 pm",
+   },
+   {
+      hour:16,
+      time:"4 pm",
+   },
+   {
+      hour:17 ,
+      time:"5 pm",
+   }, 
+   {
+      hour:18 ,
+      time:"6 pm",
+   }, 
+   {
+      hour:19 ,
+      time:"7 pm",
+   },  {
+      hour:20 ,
+      time:"8 pm",
+   }, 
 ]
+
+schedule.forEach(function(hourobj){
+   
+    var rowDiv = $("<div>").addClass("row time-block " + color).attr("id", hourobj.hour)
+   
+    var hourDiv = $("<div>").addClass("col-2 hour").attr("id", "time").text(hourobj.time)
+   
+    var textDiv = $("<textarea>").addClass("col-8 description")
+    var saveBtn = $("<button>").addClass("col-2 saveBtn").attr("id", hourobj.hour).text("save")
+   
+});
 // gets data for the header date
-function Date() {
-    var currentDate = moment().format('dddd, MMMM Do');
-    $("#currentDay").text(currentDate);
+
+function getHeaderDate() {
+   var currentHeaderDate = moment().format('MMMM Do YYYY, h:mm:ss a');
+   $("#currentDay").text(currentHeaderDate);
 }
+getHeaderDate();
+
