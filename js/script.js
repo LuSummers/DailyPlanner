@@ -51,17 +51,23 @@ var schedule = [
       time:"8 pm",
    }, 
 ]
-
 schedule.forEach(function(hourobj){
+   var color = ""
    
-    var rowDiv = $("<div>").addClass("row time-block " + color).attr("id", hourobj.hour)
+    var rowDiv = $("<div>").addClass("row time-block " + color).attr("id", hourobj.hour);
    
     var hourDiv = $("<div>").addClass("col-2 hour").attr("id", "time").text(hourobj.time)
    
     var textDiv = $("<textarea>").addClass("col-8 description")
+   
     var saveBtn = $("<button>").addClass("col-2 saveBtn").attr("id", hourobj.hour).text("save")
    
-});
+   $(".container").append(rowDiv.append(hourDiv,textDiv,saveBtn))
+   })
+   $(".saveBtn").on("click", function(){
+  
+      var hourKey = $(this).attr("id")})
+      
 // gets data for the header date
 
 function getHeaderDate() {
