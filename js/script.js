@@ -66,7 +66,8 @@ schedule.forEach(function(hourobj){
    
     var hourDiv = $("<div>").addClass("col-2 hour").attr("id", "time").text(hourobj.time)
    
-    var textDiv = $("<textarea>").addClass("col-8 description")
+    var textDiv = $("<textarea>").addClass("col-8 description").val(localStorage.getItem(hourobj.hour))
+
    
     var saveBtn = $("<button>").addClass("col-2 saveBtn").attr("id", hourobj.hour).text("save")
    
@@ -77,6 +78,10 @@ schedule.forEach(function(hourobj){
       var hourKey = $(this).attr("id")
    
       var activity = $(this).siblings(".description").val()
+
+      localStorage.setItem(hourKey, activity)
+      console.log(localStorage)
+   
    
    })
       
