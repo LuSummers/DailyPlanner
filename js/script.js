@@ -1,3 +1,4 @@
+// info for time set on scheduler
 var schedule = [
    {
       hour:7,
@@ -48,38 +49,46 @@ var schedule = [
       time:"6 pm",
    }, 
    {
-      hour:19,
+      hour:19 ,
       time:"7 pm",
-   }, 
+   },  
 ]
-schedule.forEach(function(hourobj){
+
+//schedule fuction
+schedule.forEach(function(hourObj){
+
+//colors change to determine time of the day in relation to schedule
    var color = ""
-   if (hourobj.hour < moment().hours()){
+   if (hourObj.hour < moment().hours()){
       color = "past"
    }
 
-   else if (hourobj.hour == moment().hours()){
+   else if (hourObj.hour == moment().hours()){
       color = "present"
    }
    else {color = "future"}
    
-    var rowDiv = $("<div>").addClass("row time-block " + color).attr("id", hourobj.hour);
+    var rowDiv = $("<div>").addClass("row time-block " + color).attr("id", hourObj.hour);
    
-    var hourDiv = $("<div>").addClass("col-2 hour").attr("id", "time").text(hourobj.time)
+    var hourDiv = $("<div>").addClass("col-2 hour").attr("id", "time").text(hourObj.time)
    
-    var textDiv = $("<textarea>").addClass("col-8 description").val(localStorage.getItem(hourobj.hour))
+    var textDiv = $("<textarea>").addClass("col-8 description").val(localStorage.getItem(hourObj.hour))
 
    
-    var saveBtn = $("<button>").addClass("col-2 saveBtn").attr("id", hourobj.hour).text("save")
+    var saveBtn = $("<button>").addClass("col-2 saveBtn").attr("id", hourObj.hour).text("save")
    
+    //adds the hour, text, and save button to the row div for the container
    $(".container").append(rowDiv.append(hourDiv,textDiv,saveBtn))
    })
+
+// save button function once button clicked
    $(".saveBtn").on("click", function(){
   
       var hourKey = $(this).attr("id")
    
       var activity = $(this).siblings(".description").val()
 
+//local storage
       localStorage.setItem(hourKey, activity)
       console.log(localStorage)
    

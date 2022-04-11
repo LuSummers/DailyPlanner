@@ -70,7 +70,8 @@ textarea{
   color: white;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
+/* edited for save btn hover*/
+.saveBtn:hover {
+  font-size: 25px;
   transition: all .3s ease-in-out;
 }
