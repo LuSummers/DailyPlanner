@@ -12,7 +12,7 @@ This website is an essential daily planner for effectively managing your work da
 ## Website
  https://lusummers.github.io/DailyPlanner/
  
-  ![image](https://user-images.githubusercontent.com/100633609/162651857-b495d3f2-dc74-4754-bdac-524f1f2ec798.png)
+![image](https://user-images.githubusercontent.com/100633609/162652232-ba07c0e4-d9d5-4adb-bb5a-0cfa84d17cba.png)
 
  
 
