@@ -48,10 +48,6 @@ var schedule = [
       hour:18,
       time:"6 pm",
    }, 
-   {
-      hour:19 ,
-      time:"7 pm",
-   },  
 ]
 
 //schedule fuction
