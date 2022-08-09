@@ -9,12 +9,8 @@ This website is an essential daily planner for effectively managing your work da
 * CSS
 * JAVASCRIPT
 
-## Website
- https://lusummers.github.io/DailyPlanner/
- 
-![image](https://user-images.githubusercontent.com/100633609/162652232-ba07c0e4-d9d5-4adb-bb5a-0cfa84d17cba.png)
+ ![Screenshot 2022-08-09 at 11-49-53 Google Book Search](https://user-images.githubusercontent.com/100633609/183699157-33ef1305-a029-44d1-af5f-8a95523a20bf.png)
 
- 
 
 
 
